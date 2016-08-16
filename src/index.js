@@ -1,10 +1,10 @@
 import lodash from 'lodash';
 
 import { createPrototypeDecorator, ENUMS } from './core/decorators.js';
-import { createFolderNameRegistry, buildComponentConfig } from './core/registry.js';
+import { createFolderNameRegistry } from './core/registry.js';
 import { indexFileValidator, layoutConfigurationValidator, stateConfigurationValidator, componentConfigurationValidator } from './core/validators.js';
 import { buildNameFromPath, addNameSuffix } from './core/transformers/path.js';
-import { forceControllerAsVm, forceAbstract } from './core/transformers/value.js';
+import { buildComponentConfig, forceControllerAsVm, forceAbstract } from './core/transformers/value.js';
 
 import { buildMockComponent as testingMockComponent } from './core/testing.js';
 

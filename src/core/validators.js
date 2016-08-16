@@ -1,6 +1,6 @@
 import lodash from 'lodash';
 
-import { resolveFileName } from './path.js';
+import { resolveFileName } from './util.js';
 import { getPrototypeDecoratorValue, ENUMS } from './decorators.js';
 
 /**
