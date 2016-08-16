@@ -19,12 +19,6 @@ export const indexFileValidator = ({ path }, { warn }) => {
  * @param warn
  */
 export const layoutConfigurationValidator = ({ name, value }, { warn }) => {
-    if (value.controller !== undefined) {
-        warn(`Layout '${name}' has a controller attribute. This is probably an error.`);
-    }
-    if (value.controllerAs !== undefined) {
-        warn(`Layout '${name}' has a controllerAs attribute. This is probably an error.`);
-    }
     if (value.abstract !== undefined) {
         warn(`Layout '${name}' will be forced to abstract.`);
     }

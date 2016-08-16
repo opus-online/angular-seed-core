@@ -1,0 +1,15 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var forceControllerAsVm = exports.forceControllerAsVm = function forceControllerAsVm(config) {
+    config.controllerAs = 'vm';
+    return config;
+};
+
+var forceAbstract = exports.forceAbstract = function forceAbstract(config) {
+    config.abstract = true;
+    return config;
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9jb3JlL3RyYW5zZm9ybWVycy92YWx1ZS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7OztBQUFPLElBQU0sb0RBQXNCLFNBQXRCLG1CQUFzQixDQUFDLE1BQUQsRUFBWTtBQUMzQyxXQUFPLFlBQVAsR0FBc0IsSUFBdEI7QUFDQSxXQUFPLE1BQVA7QUFDSCxDQUhNOztBQUtBLElBQU0sd0NBQWdCLFNBQWhCLGFBQWdCLENBQUMsTUFBRCxFQUFZO0FBQ3JDLFdBQU8sUUFBUCxHQUFrQixJQUFsQjtBQUNBLFdBQU8sTUFBUDtBQUNILENBSE0iLCJmaWxlIjoidmFsdWUuanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY29uc3QgZm9yY2VDb250cm9sbGVyQXNWbSA9IChjb25maWcpID0+IHtcclxuICAgIGNvbmZpZy5jb250cm9sbGVyQXMgPSAndm0nO1xyXG4gICAgcmV0dXJuIGNvbmZpZztcclxufTtcclxuXHJcbmV4cG9ydCBjb25zdCBmb3JjZUFic3RyYWN0ID0gKGNvbmZpZykgPT4ge1xyXG4gICAgY29uZmlnLmFic3RyYWN0ID0gdHJ1ZTtcclxuICAgIHJldHVybiBjb25maWc7XHJcbn07XHJcbiJdfQ==
