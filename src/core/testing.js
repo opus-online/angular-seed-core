@@ -1,10 +1,10 @@
 import lodash from 'lodash';
-import { buildComponentConfig } from './registry.js';
+import { buildComponentConfig, forceControllerAsVm } from './transformers/value.js';
 
 export const buildMockComponent = (component, configure = () => {}, mockModuleName = 'test', mockComponentName = 'test') => {
     let compileComponent;
 
-    angular.module(mockModuleName, []).component(mockComponentName, buildComponentConfig(component));
+    angular.module(mockModuleName, []).component(mockComponentName, forceControllerAsVm(buildComponentConfig(component)));
     angular.mock.module(mockModuleName, configure);
     angular.mock.inject(($injector) => {
         const $scope = $injector.get('$rootScope').$new(true);
