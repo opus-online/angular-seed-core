@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "babel src --out-file dist/angular.seed.core.js",
+    "build": "babel src --out-dir dist --source-maps inline",
     "lint": "eslint src/**/*.js"
   },
-  "main": "dist/angular.seed.core.js",
+  "main": "dist/index.js",
   "author": "",
   "license": "ISC",
   "engines": {
