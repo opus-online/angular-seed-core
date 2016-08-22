@@ -5,7 +5,9 @@
   "scripts": {
     "build": "babel src --out-dir dist --source-maps inline",
     "lint": "eslint src/**/*.js",
-    "test": "ava --verbose"
+    "precommit": "npm run test && npm run lint",
+    "test": "ava",
+    "test:watch": "ava --watch"
   },
   "main": "dist/index.js",
   "author": "",
@@ -21,9 +23,8 @@
     "source": [
       "src/**/*.js"
     ],
-    "concurrency": 5,
+    "concurrency": 10,
     "failFast": true,
-    "tap": true,
     "require": [
       "babel-register"
     ],
