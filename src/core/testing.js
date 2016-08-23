@@ -37,7 +37,14 @@ export const buildMockComponent = (component, configure = () => {}, mockModuleNa
                 $scope[key] = scopeAttributes[key];
             });
             const attributes = buildAttributes(scopeAttributes, domAttributes);
-            const $element = $injector.get('$compile')(angular.element(`<${mockComponentName} ${attributes}></${mockComponentName}>`))($scope);
+            const componentString = `<${mockComponentName} ${attributes}></${mockComponentName}>`;
+            let $element;
+            try {
+                $element = $injector.get('$compile')(angular.element(componentString))($scope);
+            }
+            catch (error) {
+                throw new Error(`Compiling ${componentString} failed with the message ${error.message}`);
+            }
             $scope.$digest();
             return $element;
         };
