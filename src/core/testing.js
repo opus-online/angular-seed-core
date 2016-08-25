@@ -1,6 +1,4 @@
 import lodash from 'lodash';
-import captureStackTrace from 'capture-stack-trace';
-
 import { buildComponentConfig, forceControllerAsVm } from './transformers/value.js';
 
 export const buildAttributes = (scopeAttributes = {}, domAttributes = {}) => {
@@ -40,15 +38,7 @@ export const buildMockComponent = (component, configure = () => {}, mockModuleNa
             });
             const attributes = buildAttributes(scopeAttributes, domAttributes);
             const componentString = `<${mockComponentName} ${attributes}></${mockComponentName}>`;
-            let $element;
-            try {
-                $element = $injector.get('$compile')(angular.element(componentString))($scope);
-            }
-            catch (error) {
-                const compileError = new Error(`Compiling ${componentString} failed with the message ${error.message}`);
-                captureStackTrace(compileError);
-                throw compileError;
-            }
+            const $element = $injector.get('$compile')(angular.element(componentString))($scope);
             $scope.$digest();
             return $element;
         };
