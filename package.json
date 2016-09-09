@@ -5,13 +5,14 @@
   "scripts": {
     "build": "babel src --out-dir dist --source-maps inline",
     "lint": "eslint src/**/*.js",
-    "precommit": "npm run test && npm run lint && npm run build && git add ./dist",
+    "precommit": "npm run build && git add ./dist",
     "test": "ava",
     "test:watch": "ava --watch --verbose"
   },
   "main": "dist/index.js",
-  "author": "",
+  "author": "Peeter Tomberg <peeter.tomberg@gmail.com>",
   "license": "MIT",
+  "homepage": "https://github.com/opus-online/angular-seed-core",
   "engines": {
     "node": "4.5.0",
     "npm": "2.15.9"
